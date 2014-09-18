@@ -39,27 +39,45 @@ public class MoveController : MonoBehaviour
 				if (GUI.RepeatButton (new Rect (0, Screen.height - TouchInputHeight, Screen.width, TouchInputHeight), "TOUCH HERE")) {
 						// This code is executed every frame that the RepeatButton remains clicked
 						
+						
+						
+						
+						
 						//Get the mousePos
 						Vector3 mousePosInWorld = cameraUsedForInputs.ScreenToWorldPoint (Input.mousePosition);
+						
+						/*
+						
+						DELETE IF NOT USED WITHIN 22 SEPT
+						
 						//Get the position of the player
 						float playerPos = transform.localPosition.x;
 						//check if its to the left or to the right
-						if (Mathf.Abs (mousePosInWorld.x - playerPos) > errorMargin) {
-								//DO NOTHING
-								movePlayerTowardsXPosition (mousePosInWorld);
-								//Debug.Log ("Mouse is left of player: " + mousePos + " with mousepos:  -" + mousePosInWorld + " and PppS:s " + transform.position);
-				
-				
-						} else {
+						if (Mathf.Abs (mousePosInWorld.x - playerPos) < errorMargin) {
 								stopPlayerXVelocity ();
+						} else {
+								//movePlayerTowardsXPosition (mousePosInWorld);
+								//Debug.Log ("Mouse is left of player: " + mousePos + " with mousepos:  -" + mousePosInWorld + " and PppS:s " + transform.position);
 						}
-						//move it accordingly
+						
+						DELETE IF NOT USED WITHIN 22 SEPT
+						*/
+						
+						transform.position = new Vector3 (mousePosInWorld.x, transform.position.y, transform.position.z);
+						
 			
+				} else {
+				
 				}
 		}
 		
+		
+		/*
+						
+						DELETE IF NOT USED WITHIN 22 SEPT
 		private void movePlayerTowardsXPosition (Vector3 newTarget)
 		{
+		
 				//check difference
 				float difference = transform.localPosition.x - newTarget.x;
 				
@@ -84,11 +102,16 @@ public class MoveController : MonoBehaviour
 				//apply
 				rigidbody2D.velocity = new Vector3 (speedToApply, rigidbody2D.velocity.y, rigidbody2D.velocity.x);
 		}
+		
 	
 		private void stopPlayerXVelocity ()
 		{
 				rigidbody2D.velocity = new Vector3 (0, rigidbody2D.velocity.y, rigidbody2D.velocity.x);
 		}
-	
+		
+		
+						
+						DELETE IF NOT USED WITHIN 22 SEPT
+	*/
 	
 }
