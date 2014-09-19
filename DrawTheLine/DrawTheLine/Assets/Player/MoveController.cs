@@ -13,9 +13,13 @@ public class MoveController : MonoBehaviour
 		public float maxSpeed;
 		public float errorMargin;
 		// Use this for initialization
+		
+		public float cameraSpeed;
+		
 		void Start ()
 		{
 				Debug.Log ("moveCont started");
+				//cameraUsedForInputs.velocity = new Vector3 (0, cameraSpeed, 0);
 		}
 	
 	

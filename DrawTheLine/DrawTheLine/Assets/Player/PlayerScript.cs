@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour
 
 		public Vector3 startPosition;
 		public float speed;
+		public static float distanceTraveled;
 
 		// Use this for initialization
 		void Start ()
@@ -17,6 +18,9 @@ public class PlayerScript : MonoBehaviour
 		// Update is called once per frame
 		void FixedUpdate ()
 		{
+				if (transform.localPosition.y > distanceTraveled) {
+						distanceTraveled = transform.localPosition.y;
 	
+				}
 		}
 }

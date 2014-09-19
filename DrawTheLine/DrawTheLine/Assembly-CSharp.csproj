@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Managers\GUIManager.cs" />
+     <Compile Include="Assets\Obstacle\ObstacleManager.cs" />
+     <Compile Include="Assets\Player\CameraFollow.cs" />
      <Compile Include="Assets\Player\MoveController.cs" />
      <Compile Include="Assets\Player\PlayerScript.cs" />
   </ItemGroup>
